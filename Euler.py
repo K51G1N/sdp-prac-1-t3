@@ -42,10 +42,22 @@ def SumSquares(n): #g17e4476 Calculates the Sum of the Squares and returns the a
         n -= 1
     return sumsq
         
+def sumOfPRimes(n): #g19p6350 Calcultes the sum of all the primes 
+	sumprime = 0;
+	for num in range(0, n):
+   if num > 1:
+       for i in range(2, num):
+           if (num % i) == 0:
+               break
+       else:
+           sumprime += num
+		   
+	return sumprime	   
 
 def SumSquareDiff(n):
    return(SquareSum(n)-SumSquares(n)) #g17e4476 returns the difference between
-    
+  
+  
 def main():
 	#g17e4476
     p6sol = SumSquareDiff(100)  #g17e4476 Solved project Euler 6, 'https://projecteuler.net/problem=6'
