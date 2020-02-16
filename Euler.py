@@ -44,14 +44,14 @@ def SumSquares(n): #g17e4476 Calculates the Sum of the Squares and returns the a
         
 def sumOfPRimes(n): #g19p6350 Calcultes the sum of all the primes 
 	sumprime = 0;
-	for num in range(0, n):
-   if num > 1:
-       for i in range(2, num):
-           if (num % i) == 0:
-               break
-       else:
-           sumprime += num
-		   
+	for num in range(1, n):
+            if num > 1:
+               for i in range(2, num):
+                   if (num % i) == 0:
+                       break
+                   else:
+                       sumprime += num
+                       
 	return sumprime	   
 
 def SumSquareDiff(n):
@@ -77,6 +77,10 @@ def main():
     get = even(dat)
     a = add(get)
     print (a)
+    
+    #g19p6350 testing sumprime function
+    print("sum prime is: " )
+    print(sumOfPRimes(5))
 
 
 main()
